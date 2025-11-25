@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { scroll-behavior: smooth; }
+
+/* Custom Editorial Typography */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+/* Atelier Luxe Custom Utilities */
+@layer utilities {
+  /* Elegant French Underlines */
+  .atelier-underline {
+    @apply relative;
+  }
+  
+  .atelier-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-stone-800 transition-all duration-700 ease-out;
+  }
+  
+  .atelier-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Editorial Dividers */
+  .editorial-divider {
+    @apply relative h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent;
+  }
+
+  /* Luxury Hover States */
+  .luxury-hover {
+    @apply transition-all duration-500 ease-in-out hover:scale-[1.02] hover:shadow-2xl;
+  }
+
+  /* Asymmetric Grid Helpers */
+  .grid-editorial {
+    @apply grid gap-8 lg:gap-16;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  /* Parisian Spacing */
+  .section-spacing {
+    @apply py-20 lg:py-32;
+  }
+
+  /* Generous White Space */
+  .breathing-space {
+    @apply px-6 md:px-12 lg:px-24 xl:px-32;
+  }
+
+  /* Sophisticated Fade In */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Staggered Delays for Editorial Flow */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  /* Delicate Line Work */
+  .atelier-border-top {
+    @apply border-t border-stone-200;
+  }
+
+  .atelier-border-bottom {
+    @apply border-b border-stone-200;
+  }
+
+  /* Vogue-Inspired Text Shadows */
+  .editorial-text-shadow {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Artistic Overlay */
+  .overlay-gradient {
+    @apply absolute inset-0 bg-gradient-to-t from-stone-900/60 via-stone-900/20 to-transparent;
+  }
+
+  /* Gallery Aspect Ratios */
+  .aspect-editorial {
+    aspect-ratio: 3/4;
+  }
+
+  .aspect-landscape-editorial {
+    aspect-ratio: 16/10;
+  }
+
+  /* Minimal Button Reset with Luxury Touch */
+  .btn-atelier {
+    @apply inline-block px-8 py-4 bg-stone-800 text-rose-50 tracking-widest text-xs uppercase font-light;
+    @apply transition-all duration-500 hover:bg-stone-900 hover:tracking-[0.3em] hover:px-10;
+    @apply border border-stone-800 hover:shadow-lg;
+  }
+
+  .btn-atelier-outline {
+    @apply inline-block px-8 py-4 bg-transparent text-stone-800 tracking-widest text-xs uppercase font-light;
+    @apply transition-all duration-500 hover:bg-stone-800 hover:text-rose-50 hover:tracking-[0.3em] hover:px-10;
+    @apply border border-stone-800;
+  }
+
+  /* Sophisticated Cursor Effects */
+  .cursor-luxury {
+    @apply cursor-pointer transition-opacity duration-300 hover:opacity-80;
+  }
+
+  /* French Atelier Accents */
+  .accent-line {
+    @apply w-16 h-px bg-stone-800;
+  }
+
+  .accent-line-vertical {
+    @apply w-px h-16 bg-stone-800;
+  }
+
+  /* Typography Hierarchy */
+  .display-editorial {
+    @apply text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extralight tracking-tighter leading-[0.9];
+  }
+
+  .headline-editorial {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+  }
+
+  .subhead-editorial {
+    @apply text-2xl md:text-3xl lg:text-4xl font-light tracking-wide;
+  }
+
+  .body-editorial {
+    @apply text-base md:text-lg leading-relaxed font-light tracking-wide;
+  }
+
+  .caption-editorial {
+    @apply text-xs md:text-sm tracking-[0.2em] uppercase font-light text-stone-600;
+  }
+
+  /* Asymmetric Offset Layouts */
+  .offset-left {
+    @apply ml-0 lg:ml-12 xl:ml-24;
+  }
+
+  .offset-right {
+    @apply mr-0 lg:mr-12 xl:mr-24;
+  }
+
+  /* Image Hover Effects */
+  .image-zoom {
+    @apply overflow-hidden;
+  }
+
+  .image-zoom img {
+    @apply transition-transform duration-700 ease-out hover:scale-110;
+  }
+
+  /* Luxe Background Textures */
+  .bg-texture-subtle {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(251, 207, 232, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(254, 243, 199, 0.03) 0%, transparent 50%);
+  }
+
+  /* Editorial Number Styling */
+  .editorial-number {
+    @apply text-9xl md:text-[12rem] lg:text-[16rem] font-extralight text-stone-200 leading-none;
+    @apply select-none pointer-events-none;
+  }
+
+  /* Showroom Card Styling */
+  .showroom-card {
+    @apply bg-white border border-stone-200 transition-all duration-500;
+    @apply hover:border-stone-800 hover:shadow-2xl hover:-translate-y-2;
+  }
+
+  /* Minimal Scroll Indicator */
+  .scroll-indicator {
+    @apply w-px h-16 bg-gradient-to-b from-stone-800 to-transparent;
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(8px);
+    }
+  }
+}
+
+/* Custom Scrollbar for Luxury Experience */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-rose-50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-stone-300 hover:bg-stone-400;
+    border-radius: 4px;
+  }
+}
+
+/* Selection Styling */
+@layer base {
+  ::selection {
+    @apply bg-amber-100 text-stone-900;
+  }
+
+  ::-moz-selection {
+    @apply bg-amber-100 text-stone-900;
+  }
+}
