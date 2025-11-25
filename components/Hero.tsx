@@ -16,7 +16,7 @@ const collections = [
   {
     season: 'Été',
     year: '2024',
-    title: 'Côte d&apos;Azur',
+    title: 'Côte d\'Azur',
     description: 'Sun-drenched silhouettes for the modern muse',
     image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1920&q=80',
     mood: 'Luminous',
@@ -25,7 +25,7 @@ const collections = [
   {
     season: 'Automne',
     year: '2024',
-    title: 'L&apos;Atelier',
+    title: 'L\'Atelier',
     description: 'Timeless craftsmanship in every stitch',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=80',
     mood: 'Refined',
